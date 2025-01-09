@@ -1,0 +1,76 @@
+import java.util.Random;
+
+public class MenuRecommenderNoArray {
+    public static void main(String[] args) {
+        // 카테고리 변수 선언
+        String category1 = "찌개";
+        String category2 = "특식";
+        String category3 = "밑반찬";
+        String category4 = "간식";
+        String category5 = "면";
+        String category6 = "야식";
+        String category7 = "국";
+        String category8 = "덮밥";
+
+        // 메뉴 변수 선언 (카테고리별로)
+        String menu1_1 = "김치찌개", menu1_2 = "된장찌개", menu1_3 = "부대찌개", menu1_4 = "순두부찌개", menu1_5 = "청국장", 
+               menu1_6 = "고추장찌개", menu1_7 = "감자찌개", menu1_8 = "돼지찌개", menu1_9 = "닭볶음탕";
+
+        String menu2_1 = "스테이크", menu2_2 = "돈가스", menu2_3 = "찜닭", menu2_4 = "파스타", menu2_5 = "리조또", 
+               menu2_6 = "샐러드", menu2_7 = "랍스터", menu2_8 = "초밥", menu2_9 = "불고기";
+
+        // 랜덤 객체 생성
+        Random random = new Random();
+
+        // 1. 랜덤으로 카테고리 선택
+        int randomCategory = random.nextInt(8) + 1; // 1~8
+        String selectedCategory = "";
+        switch (randomCategory) {
+            case 1: selectedCategory = category1; break;
+            case 2: selectedCategory = category2; break;
+            case 3: selectedCategory = category3; break;
+            case 4: selectedCategory = category4; break;
+            case 5: selectedCategory = category5; break;
+            case 6: selectedCategory = category6; break;
+            case 7: selectedCategory = category7; break;
+            case 8: selectedCategory = category8; break;
+        }
+        System.out.println("추천 카테고리: " + selectedCategory);
+
+        // 2. 해당 카테고리에서 랜덤으로 메뉴 선택
+        String selectedMenu = "";
+        int randomMenu = random.nextInt(9) + 1; // 1~9
+
+        switch (randomCategory) {
+            case 1: // 찌개
+                switch (randomMenu) {
+                    case 1: selectedMenu = menu1_1; break;
+                    case 2: selectedMenu = menu1_2; break;
+                    case 3: selectedMenu = menu1_3; break;
+                    case 4: selectedMenu = menu1_4; break;
+                    case 5: selectedMenu = menu1_5; break;
+                    case 6: selectedMenu = menu1_6; break;
+                    case 7: selectedMenu = menu1_7; break;
+                    case 8: selectedMenu = menu1_8; break;
+                    case 9: selectedMenu = menu1_9; break;
+                }
+                break;
+            case 2: // 특식
+                switch (randomMenu) {
+                    case 1: selectedMenu = menu2_1; break;
+                    case 2: selectedMenu = menu2_2; break;
+                    case 3: selectedMenu = menu2_3; break;
+                    case 4: selectedMenu = menu2_4; break;
+                    case 5: selectedMenu = menu2_5; break;
+                    case 6: selectedMenu = menu2_6; break;
+                    case 7: selectedMenu = menu2_7; break;
+                    case 8: selectedMenu = menu2_8; break;
+                    case 9: selectedMenu = menu2_9; break;
+                }
+                break;
+            // 다른 카테고리도 동일한 방식으로 추가 가능
+        }
+
+        System.out.println("추천 메뉴: " + selectedMenu);
+    }
+}
