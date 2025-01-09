@@ -1,0 +1,3 @@
+java
+
+categories.put("새 카테고리", List.of("새 메뉴1", "새 메뉴2"));
