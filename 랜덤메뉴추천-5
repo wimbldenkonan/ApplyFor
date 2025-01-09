@@ -1,0 +1,26 @@
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Random;
+
+public class MenuRecommender {
+    public static void main(String[] args) {
+        // 메뉴 데이터 (동적으로 관리)
+        Map<String, List<String>> categories = new HashMap<>();
+        categories.put("찌개", List.of("김치찌개", "된장찌개", "부대찌개", "순두부찌개"));
+        categories.put("특식", List.of("스테이크", "돈가스", "찜닭", "파스타"));
+
+        // 랜덤 객체 생성
+        Random random = new Random();
+        Object[] categoryKeys = categories.keySet().toArray();
+
+        // 1. 랜덤 카테고리 선택
+        String randomCategory = (String) categoryKeys[random.nextInt(categoryKeys.length)];
+        System.out.println("추천 카테고리: " + randomCategory);
+
+        // 2. 랜덤 메뉴 선택
+        List<String> menus = categories.get(randomCategory);
+        String randomMenu = menus.get(random.nextInt(menus.size()));
+        System.out.println("추천 메뉴: " + randomMenu);
+    }
+}
