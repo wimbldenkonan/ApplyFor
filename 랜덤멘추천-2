@@ -1,0 +1,65 @@
+// 1. 랜덤으로 카테고리 선택
+int randomCategory = random.nextInt(8) + 1; // 1~8
+String selectedCategory = "";
+// 카테고리 선택
+if (randomCategory == 1) {
+selectedCategory = "찌개";
+} else if (randomCategory == 2) {
+selectedCategory = "특식";
+} else if (randomCategory == 3) {
+selectedCategory = "밑반찬";
+} else if (randomCategory == 4) {
+selectedCategory = "간식";
+} else if (randomCategory == 5) {
+selectedCategory = "면";
+} else if (randomCategory == 6) {
+selectedCategory = "야식";
+} else if (randomCategory == 7) {
+selectedCategory = "국";
+} else if (randomCategory == 8) {
+selectedCategory = "덮밥";
+}
+System.out.println("추천 카테고리: " + selectedCategory);
+// 2. 해당 카테고리에서 랜덤 메뉴 선택
+int randomMenu = random.nextInt(9) + 1; // 1~9
+String selectedMenu = "";
+// 메뉴 선택
+if (randomCategory == 1 && randomMenu == 1) {
+selectedMenu = "김치찌개";
+} else if (randomCategory == 1 && randomMenu == 2) {
+selectedMenu = "된장찌개";
+} else if (randomCategory == 1 && randomMenu == 3) {
+selectedMenu = "부대찌개";
+} else if (randomCategory == 1 && randomMenu == 4) {
+selectedMenu = "순두부찌개";
+} else if (randomCategory == 1 && randomMenu == 5) {
+selectedMenu = "청국장";
+} else if (randomCategory == 1 && randomMenu == 6) {
+selectedMenu = "고추장찌개";
+} else if (randomCategory == 1 && randomMenu == 7) {
+selectedMenu = "감자찌개";
+} else if (randomCategory == 1 && randomMenu == 8) {
+selectedMenu = "돼지찌개";
+} else if (randomCategory == 1 && randomMenu == 9) {
+selectedMenu = "닭볶음탕";
+} else if (randomCategory == 2 && randomMenu == 1) {
+selectedMenu = "스테이크";
+} else if (randomCategory == 2 && randomMenu == 2) {
+selectedMenu = "돈가스";
+} else if (randomCategory == 2 && randomMenu == 3) {
+selectedMenu = "찜닭";
+} else if (randomCategory == 2 && randomMenu == 4) {
+selectedMenu = "파스타";
+} else if (randomCategory == 2 && randomMenu == 5) {
+selectedMenu = "리조또";
+} else if (randomCategory == 2 && randomMenu == 6) {
+selectedMenu = "샐러드";
+} else if (randomCategory == 2 && randomMenu == 7) {
+selectedMenu = "랍스터";
+} else if (randomCategory == 2 && randomMenu == 8) {
+selectedMenu = "초밥";
+} else if (randomCategory == 2 && randomMenu == 9) {
+selectedMenu = "불고기";
+}
+// 다른 카테고리도 동일하게 추가 가능
+System.out.println("추천 메뉴: " + selectedMenu);
